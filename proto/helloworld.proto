@@ -2,7 +2,7 @@ syntax = "proto2";
 
 package helloworld;
 
-option go_package = "github.com/folder/grpc-demo/proto;helloworld";
+option go_package = "./proto;helloworld";
 
 message HelloRequest {
   optional string name = 1;
@@ -15,4 +15,3 @@ message HelloReply {
 service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply);
 }
-
