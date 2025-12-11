@@ -14,7 +14,7 @@ type server struct {
 }
 
 func (s *server) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloReply, error) {
-    msg := "Hello " + in.GetName()
+    msg := "Hello there" + in.GetName()
     return &pb.HelloReply{
         Message: &msg,
     }, nil
