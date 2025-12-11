@@ -1,0 +1,18 @@
+syntax = "proto2";
+
+package helloworld;
+
+option go_package = "github.com/folder/grpc-demo/proto;helloworld";
+
+message HelloRequest {
+  optional string name = 1;
+}
+
+message HelloReply {
+  optional string message = 1;
+}
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
